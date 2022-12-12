@@ -1,0 +1,63 @@
+<!doctype html>
+<title>Email Transaction Stori</title>
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .logo {
+            background-color: #ffffff;
+            width: 200px;
+        }
+        .content {
+            padding: 10%;
+        }
+        .table {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Transaction Balance</h1>
+        <img class="logo" src="https://storicard.com/_next/static/media/complete-logo.9a85efb3.svg">
+        <p>Dear {{first_name}} {{last_name}} this is the balance of your transactions in the year:</p>
+        <table class="table">
+            <tr>
+                <th>Date</th>
+                <th>Amount</th>
+            </tr>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{transaction[0]}}</td>
+                <td>{{transaction[1]}}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+        <p>
+        <div> Your Total Balance is: {{ total_balance|round(2) }} </div>
+        {% for key, value in transactionsAmount %}
+        <div> Number of transactions in {{key}}: {{value}} </div>
+        {% endfor %}
+        <div> Average debit amount: {{ debitAverage }}</div>
+        <div> Average credit amount: {{ creditAverage }} </div>
+        </p>
+    </div>
+</body>
