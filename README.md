@@ -5,7 +5,7 @@
 + It is recommended to have installed on your computer [Python 3.10.1](https://www.python.org/downloads/release/python-3101/)
 + The API was created with the framework [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 + The connection to the database is achieved with the ORM [SQLAlchemy](https://www.sqlalchemy.org/blog/2022/06/24/sqlalchemy-1.4.39-released/)
-+ For unit tests, the library was used [Unitest](https://pypi.org/project/unittest2/)
++ For unit tests, the library was used [Unittest](https://pypi.org/project/unittest2/)
 
 ## Prerequisitos
 
